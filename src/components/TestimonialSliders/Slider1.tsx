@@ -1,5 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Card1 from "../cards/TestimonialCards/Card1";
 import { Testimonial } from "@/types/testimonial";
 
@@ -26,11 +28,11 @@ const Slider1: React.FC<Slider1Props> = ({
 }) => {
   const settings = {
     dots: true,
-    // autoplay,
-    // infinite,
+    autoplay,
+    infinite,
     speed: 500,
-    // slidesToShow,
-    // slidesToScroll,
+    slidesToShow,
+    slidesToScroll,
     centerMode,
     responsive: [
       {
@@ -99,12 +101,12 @@ const Slider1: React.FC<Slider1Props> = ({
             <div
               key={index}
               className="px-4" // Apply padding here for consistent gap
-              // style={{
-              //   paddingRight: `${gap / 2}px`,
-              //   paddingLeft: `${gap / 2}px`,
-              // }}
+              style={{
+                paddingRight: `${gap / 2}px`,
+                paddingLeft: `${gap / 2}px`,
+              }}
             >
-              <Card1 {...testimonial} />
+              <CardComponent {...testimonial} />
             </div>
           ))}
         </Slider>
