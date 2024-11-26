@@ -73,7 +73,7 @@ const Slider2: React.FC<Slider2Props> = ({
             <Slider {...settings} style={{ gap: `${gap}px` }}>
               {testimonials.map((testimonial) => (
                 <div
-                  key={testimonial.id}
+                  key={testimonial._id}
                   style={{
                     paddingRight: `${gap / 2}px`,
                     paddingLeft: `${gap / 2}px`,
